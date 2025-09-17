@@ -107,19 +107,19 @@ def play_flappy_bird():
     high_score = 0
     trigger_fly = False  
     # chèn background
-    bg = pygame.image.load('assets/background-night.png').convert()
+    bg = pygame.image.load('assets/background.png').convert()
     bg = pygame.transform.scale2x(bg)
     # chèn sàn
-    floor = pygame.image.load('assets/floor.png').convert()
+    floor = pygame.image.load('assets/waterfloor.png').convert()
     floor = pygame.transform.scale2x(floor)
     floor_x_pos = 0
     # tạo chim
     bird_down = pygame.transform.scale2x(pygame.image.load(
-        'assets/yellowbird-downflap.png').convert_alpha())
+        'assets/down.png').convert_alpha())
     bird_mid = pygame.transform.scale2x(pygame.image.load(
-        'assets/yellowbird-midflap.png').convert_alpha())
+        'assets/mid.png').convert_alpha())
     bird_up = pygame.transform.scale2x(pygame.image.load(
-        'assets/yellowbird-upflap.png').convert_alpha())
+        'assets/up.png').convert_alpha())
     bird_list = [bird_down, bird_mid, bird_up]  # 0 1 2
     bird_index = 0
     bird = bird_list[bird_index]
@@ -130,7 +130,7 @@ def play_flappy_bird():
     birdflap = pygame.USEREVENT + 1
     pygame.time.set_timer(birdflap, 200)
     # tạo ống
-    pipe_surface = pygame.image.load('assets/pipe-green.png').convert()
+    pipe_surface = pygame.image.load('assets/pipe_blue.png').convert()
     pipe_surface = pygame.transform.scale2x(pipe_surface)
     pipe_list = []
     # tạo timer
@@ -139,7 +139,7 @@ def play_flappy_bird():
     pipe_height = range(250, 500)
     # Tạo màn hình kết thúc
     game_over_surface = pygame.transform.scale2x(
-        pygame.image.load('assets/message.png').convert_alpha())
+        pygame.image.load('assets/watting_temp.png').convert_alpha())
     game_over_rect = game_over_surface.get_rect(center=(216, 384))
     # Chèn âm thanh
     flap_sound = pygame.mixer.Sound('sound/sfx_wing.wav')

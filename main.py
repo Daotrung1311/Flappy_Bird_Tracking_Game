@@ -38,13 +38,13 @@ class Control(object):
         self.done = False
         self.fps = 60.0
         self.color = WHITE
-        message1 = "Flappy Bird"
+        message1 = "Dolphin Dive"
         self.button1 = Button((150,250,200,50),RED, self.run_flappy_bird,
                              text=message1, **BUTTON_STYLE)
         # self.button2.rect.center = (self.screen_rect.centerx,100)
 
     def run_flappy_bird(self):
-        print("Flappy Bird")
+        print("Dolphin Dive")
         play_flappy_bird()
         
         
