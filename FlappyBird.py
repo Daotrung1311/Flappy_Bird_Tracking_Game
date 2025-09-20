@@ -110,7 +110,7 @@ def play_flappy_bird():
     bg = pygame.image.load('assets/background.png').convert()
     bg = pygame.transform.scale2x(bg)
     # chèn sàn
-    floor = pygame.image.load('assets/waterfloor.png').convert()
+    floor = pygame.image.load('assets/bluefloor.png').convert()
     floor = pygame.transform.scale2x(floor)
     floor_x_pos = 0
     # tạo chim
@@ -242,7 +242,7 @@ def play_flappy_bird():
         # sàn
         floor_x_pos -= 1
         draw_floor()
-        if floor_x_pos <= -432:
+        if floor_x_pos <= -432: 
             floor_x_pos = 0
 
         pygame.display.update()
